@@ -1,0 +1,126 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: whitesmoke;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-links img {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.2);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      margin-top: 15px;
+    }
+  
+    .social-links {
+      margin-top: 15px;
+    }
+  }
+  
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; 
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap; 
+    }
+  
+    .logo {
+      order: 1;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 70%;
+      position: absolute;
+      top: 100px;
+      left: 75px;
+      background-color: white;
+      z-index: 1;
+      order: 2;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links a {
+      padding: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: red;
+      color: white;
+      border-radius: 5px;
+      border-bottom: 1px solid silver;
+    }
+  
+    .social-links {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+      order: 4; 
+      margin-left: auto; 
+    }
+  
+    .navbar.open {
+      height: auto;
+    }
+  }
+  

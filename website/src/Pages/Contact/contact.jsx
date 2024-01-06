@@ -1,10 +1,15 @@
 import React from "react";
 import './Contact-CSS/contact.css';
+import ContactForm from "./contact-form";
+import ContactStrip from "./contact-strip";
+import Maps from "./maps";
 
 const Contact = () =>{
     return(
         <div>
-            <h1>Contact PAGE</h1>
+            <ContactForm/>
+            <ContactStrip/>
+            <Maps/>
         </div>
     )
 }
